@@ -47,7 +47,8 @@ pipeline {
           }
         }
       }
-
+  }
+  
   post {
     always {
       archiveArtifacts artifacts: '**/terraform.lock.hcl', allowEmptyArchive: true
