@@ -4,7 +4,7 @@ data "aws_region" "current" {}
 
 data "aws_vpc" "selected" {
   filter {
-    name = "tag:Name"
+    name   = "tag:Name"
     values = ["ecs-vpc"]
   }
 }
