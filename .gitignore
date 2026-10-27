@@ -1,0 +1,21 @@
+# Terraform local directory (providers/plugins cache)
+.terraform/
+
+# State files — contain sensitive data & infrastructure info
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+
+# Variables file — may contain secrets
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+
+# Plan output
+tfplan
+*.tfplan
+plan.out
+
+# Sensitive/unknown files
+wild.txt
