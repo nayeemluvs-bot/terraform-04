@@ -36,17 +36,17 @@ pipeline {
         sh 'terraform validate'
       }
     }
-
+    
     stage('Plan') {
       steps {
         withCredentials([
           string(credentialsId: 'aws-access-key-id', variable: 'AWS_ACCESS_KEY_ID'),
           string(credentialsId: 'aws-secret-access-key', variable: 'AWS_SECRET_ACCESS_KEY')
           ]) {
-        sh 'terraform plan -input=false -no-color'
+          sh 'terraform plan -input=false -no-color'
+          }
+        }
       }
-    }
-  }
 
   post {
     always {
